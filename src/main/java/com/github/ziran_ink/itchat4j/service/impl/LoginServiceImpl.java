@@ -1,6 +1,5 @@
 package com.github.ziran_ink.itchat4j.service.impl;
 
-import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
@@ -129,7 +128,6 @@ public class LoginServiceImpl implements ILoginService {
 
 	@Override
 	public boolean getQR(String qrPath) {
-		qrPath = qrPath + File.separator + "QR.jpg";
 		String qrUrl = URLEnum.QRCODE_URL.getUrl() + core.getUuid();
 		HttpEntity entity = myHttpClient.doGet(qrUrl, null, true, null);
 		try {
